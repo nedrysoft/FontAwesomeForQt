@@ -95,7 +95,7 @@ namespace Nedrysoft {
              * @param[in]   pointSize the size in points of the icon.
              * @param[in]   colour the colour for the resulting icon.
              *
-             * @return      the QIcon of the FontAwesome glyph.
+             * @returns     the QIcon of the FontAwesome glyph.
              */
             static auto icon(QString glyphName, int pointSize, QColor colour) -> QIcon;
 
