@@ -1,7 +1,7 @@
 #
 # Copyright (C) 2020 Adrian Carpenter
 #
-# This file is part of fontawesome for qt (https://github.com/fizzyade/FontAwesomeForQt)
+# This file is part of fontawesome for qt (https://github.com/nedrysoft/FontAwesomeForQt)
 #
 # A cross-platform library for using FontAwesome glyphs in Qt applications.
 #
