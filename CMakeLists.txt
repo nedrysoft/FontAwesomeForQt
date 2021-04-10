@@ -46,6 +46,13 @@ set(library_SOURCES
     src/FontAwesome.qrc
 )
 
+if(WIN32)
+    configure_file("Version.h.in" "Version.h")
+    list(APPEND library_SOURCES "version.rc")
+    add_definitions("-DNEDRYSOFT_MODULE_FILENAME=\"${PROJECT_NAME}.dll\"")
+    add_definitions("-DNEDRYSOFT_MODULE_NAME=\"${PROJECT_NAME}\"")
+endif()
+
 set(Qt_LIBS Qt5::Core Qt5::Widgets)
 
 add_library(${PROJECT_NAME} SHARED
