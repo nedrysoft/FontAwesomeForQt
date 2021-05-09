@@ -73,6 +73,8 @@ endif()
 
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core Widgets REQUIRED)
 
+set(Qt_LIBS Qt${QT_VERSION_MAJOR}::Core Qt${QT_VERSION_MAJOR}::Widgets)
+
 set(library_SOURCES
     src/FontAwesome.cpp
     src/FontAwesome.h
@@ -85,8 +87,6 @@ if(WIN32)
     add_definitions("-DNEDRYSOFT_MODULE_FILENAME=\"${PROJECT_NAME}.dll\"")
     add_definitions("-DNEDRYSOFT_MODULE_NAME=\"${PROJECT_NAME}\"")
 endif()
-
-set(Qt_LIBS Qt${QT_VERSION_MAJOR}::Core Qt${QT_VERSION_MAJOR}::Widgets)
 
 add_library(${PROJECT_NAME} SHARED
     ${library_SOURCES}
