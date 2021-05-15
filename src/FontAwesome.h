@@ -56,7 +56,7 @@ namespace Nedrysoft {
             /**
              * @brief       Returns the name of the brands font.
              *
-             * #returns     the name of the brands font.
+             * @returns     the name of the brands font.
              */
             static auto brandsName() ->  QString;
 
@@ -79,7 +79,7 @@ namespace Nedrysoft {
             /**
              * @brief       Returns a rich text with FontAwesome glyphs.
              *
-             * @details     takes a QString with tags in [fas|fab|far <glyph name>] and produces a HTML rich text
+             * @details     takes a QString with tags in [fas|fab|far \<glyph name\>] and produces a HTML rich text
              *              which then includes the respective font awesome glyphs in
              *
              * @param[in]   string the text to convert.
@@ -100,6 +100,8 @@ namespace Nedrysoft {
             static auto icon(QString glyphName, int pointSize, QColor colour) -> QIcon;
 
         private:
+            //! @cond
+
             int m_brandsId;
             int m_regularId;
             int m_solidId;
@@ -111,6 +113,8 @@ namespace Nedrysoft {
             QString m_styleString;
 
             QMap<QString, QString> m_glyphMap;
+
+            //! @endcond
     };
 }
 
